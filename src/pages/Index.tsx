@@ -195,13 +195,12 @@ export default function Index() {
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#1E1E3F] bg-[#0A0A14]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00F5FF] to-[#BF00FF] flex items-center justify-center text-[#0A0A14] font-russo text-sm font-bold">
-              LV
-            </div>
-            <span className="font-russo text-white text-lg tracking-wider">
-              LEVEL<span className="neon-text-cyan">UP</span>
-            </span>
+          <button onClick={() => scrollTo("home")} className="flex items-center">
+            <img
+              src="https://cdn.poehali.dev/projects/a4555edc-3faa-4bb0-ae53-8e65062a440a/bucket/dc412269-39c0-46e1-9290-d4bc3738db62.png"
+              alt="Level Up"
+              className="h-10 w-auto object-contain"
+            />
           </button>
 
           <div className="hidden md:flex items-center gap-8">
