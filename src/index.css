@@ -4,89 +4,40 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 240 50% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 240 40% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 240 40% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 183 100% 50%;
+    --primary-foreground: 240 50% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 270 100% 50%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 30% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 183 100% 50%;
+    --accent-foreground: 240 50% 4%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 330 100% 44%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 240 30% 18%;
+    --input: 240 30% 15%;
+    --ring: 183 100% 50%;
+
+    --radius: 0.75rem;
+
+    --neon-cyan: #00f5ff;
+    --neon-purple: #bf00ff;
+    --neon-pink: #ff006e;
+    --neon-green: #39ff14;
   }
 }
 
@@ -96,6 +47,270 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rubik;
+    background-color: #0a0a14;
+    color: #e8e8f0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Russo One", sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-text-cyan {
+    color: #00f5ff;
+    text-shadow:
+      0 0 10px #00f5ff,
+      0 0 30px #00f5ff60;
+  }
+
+  .neon-text-purple {
+    color: #bf00ff;
+    text-shadow:
+      0 0 10px #bf00ff,
+      0 0 30px #bf00ff60;
+  }
+
+  .neon-text-pink {
+    color: #ff006e;
+    text-shadow:
+      0 0 10px #ff006e,
+      0 0 30px #ff006e60;
+  }
+
+  .neon-border-cyan {
+    border-color: #00f5ff;
+    box-shadow:
+      0 0 8px #00f5ff40,
+      inset 0 0 8px #00f5ff10;
+  }
+
+  .neon-border-purple {
+    border-color: #bf00ff;
+    box-shadow:
+      0 0 8px #bf00ff40,
+      inset 0 0 8px #bf00ff10;
+  }
+
+  .neon-border-pink {
+    border-color: #ff006e;
+    box-shadow:
+      0 0 8px #ff006e40,
+      inset 0 0 8px #ff006e10;
+  }
+
+  .neon-glow-cyan {
+    box-shadow:
+      0 0 20px #00f5ff40,
+      0 0 60px #00f5ff20;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .card-game {
+    background: linear-gradient(135deg, #111126 0%, #0d0d20 100%);
+    border: 1px solid #1e1e3f;
+    transition: all 0.3s ease;
+  }
+
+  .card-game:hover {
+    border-color: #00f5ff;
+    box-shadow:
+      0 0 20px #00f5ff20,
+      0 8px 32px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+  }
+
+  .btn-neon {
+    background: linear-gradient(135deg, #00f5ff20 0%, #00f5ff10 100%);
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+    text-shadow: 0 0 8px #00f5ff80;
+    box-shadow: 0 0 12px #00f5ff30;
+    transition: all 0.3s ease;
+    font-family: "Russo One", sans-serif;
+  }
+
+  .btn-neon:hover {
+    background: linear-gradient(135deg, #00f5ff 0%, #00c8d4 100%);
+    color: #0a0a14;
+    text-shadow: none;
+    box-shadow:
+      0 0 25px #00f5ff60,
+      0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-purple {
+    background: linear-gradient(135deg, #bf00ff 0%, #7b00b8 100%);
+    border: 1px solid #bf00ff;
+    color: #ffffff;
+    box-shadow: 0 0 15px #bf00ff40;
+    transition: all 0.3s ease;
+    font-family: "Russo One", sans-serif;
+  }
+
+  .btn-purple:hover {
+    box-shadow:
+      0 0 30px #bf00ff70,
+      0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+    opacity: 0.4;
+    animation: scan 4s linear infinite;
+  }
+
+  .progress-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: #1e1e3f;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #00f5ff, #bf00ff);
+    box-shadow: 0 0 8px #00f5ff60;
+    transition: width 1.5s ease-out;
+  }
+
+  .tier-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: "Russo One", sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .tier-novice {
+    background: #39ff1420;
+    border: 1px solid #39ff14;
+    color: #39ff14;
+  }
+
+  .tier-warrior {
+    background: #00f5ff20;
+    border: 1px solid #00f5ff;
+    color: #00f5ff;
+  }
+
+  .tier-champion {
+    background: #bf00ff20;
+    border: 1px solid #bf00ff;
+    color: #bf00ff;
+  }
+
+  .tier-legend {
+    background: #ffe60020;
+    border: 1px solid #ffe600;
+    color: #ffe600;
+    text-shadow: 0 0 8px #ffe60080;
+  }
+
+  .nav-link {
+    color: #8888aa;
+    font-family: "Russo One", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #00f5ff;
+    text-shadow: 0 0 8px #00f5ff80;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #00f5ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 8px #00f5ff;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
+  .section-title {
+    font-family: "Russo One", sans-serif;
+    font-size: clamp(28px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hexagon-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hexagon-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, #bf00ff15 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, #00f5ff15 0%, transparent 60%),
+      radial-gradient(ellipse at 60% 80%, #ff006e10 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a14;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00f5ff40;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00f5ff80;
   }
 }
