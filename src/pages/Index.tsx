@@ -195,12 +195,24 @@ export default function Index() {
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#1E1E3F] bg-[#0A0A14]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <button onClick={() => scrollTo("home")} className="flex items-center">
-            <img
-              src="https://cdn.poehali.dev/projects/a4555edc-3faa-4bb0-ae53-8e65062a440a/bucket/dc412269-39c0-46e1-9290-d4bc3738db62.png"
-              alt="Level Up"
-              className="h-14 w-auto object-contain"
-            />
+          <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
+            {/* Иконка */}
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="#2B3A8F"/>
+              <polygon points="20,7 32,30 8,30" fill="#4A90C4" opacity="0.5"/>
+              <polygon points="20,11 30,28 10,28" fill="#00BFFF" opacity="0.85"/>
+              <rect x="8" y="29" width="24" height="5" rx="2" fill="#5BB8E8"/>
+            </svg>
+            {/* Текст */}
+            <span className="font-russo text-xl tracking-wide" style={{
+              background: "linear-gradient(90deg, #FFE600 0%, #FF4500 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              textShadow: "none",
+              fontFamily: "Russo One, sans-serif",
+            }}>
+              Level up
+            </span>
           </button>
 
           <div className="hidden md:flex items-center gap-8">
