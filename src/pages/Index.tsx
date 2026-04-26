@@ -521,7 +521,7 @@ export default function Index() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="card-game rounded-2xl p-8 animate-on-scroll">
               <h3 className="font-russo text-white text-xl mb-6">Напишите нам</h3>
               <div className="space-y-4">
@@ -580,6 +580,29 @@ export default function Index() {
                 <p className="text-muted-foreground font-rubik text-sm">
                   Напиши нам — поможем с настройкой кампании и уровнями вознаграждений
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* MAP */}
+          <div className="animate-on-scroll">
+            <div className="card-game rounded-2xl overflow-hidden" style={{ border: "1px solid #1E1E3F" }}>
+              <div className="px-6 py-4 border-b border-[#1E1E3F] flex items-center gap-3">
+                <Icon name="MapPin" size={18} className="text-[#FF006E]" />
+                <span className="font-russo text-white text-sm">Москва, ул. Арбат, 1</span>
+                <span className="text-xs text-muted-foreground font-rubik ml-auto">Пн–Пт: 10:00–19:00</span>
+              </div>
+              <div className="relative h-72 overflow-hidden">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=37.595714%2C55.752023&z=15&pt=37.595714,55.752023,pm2rdm&lang=ru_RU"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Карта офиса"
+                  className="w-full h-full"
+                  style={{ filter: "invert(0.9) hue-rotate(180deg) saturate(0.8) brightness(0.85)" }}
+                />
               </div>
             </div>
           </div>
