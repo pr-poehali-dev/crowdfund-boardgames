@@ -199,7 +199,7 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/a4555edc-3faa-4bb0-ae53-8e65062a440a/bucket/dc412269-39c0-46e1-9290-d4bc3738db62.png"
               alt="Level Up"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </button>
 
