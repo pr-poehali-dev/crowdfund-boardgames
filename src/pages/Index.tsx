@@ -483,6 +483,63 @@ export default function Index() {
               </div>
             </div>
           </div>
+
+          {/* TEAM */}
+          <div className="mt-20">
+            <div className="text-center mb-10 animate-on-scroll">
+              <span className="tier-badge tier-cyan mb-3 inline-flex" style={{ background: "#00F5FF15", border: "1px solid #00F5FF", color: "#00F5FF" }}>👾 НАША КОМАНДА</span>
+              <h3 className="font-russo text-white text-2xl md:text-3xl mt-3">Люди за <span className="neon-text-cyan">платформой</span></h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Алексей Громов",
+                  role: "Основатель & CEO",
+                  emoji: "🧠",
+                  color: "#00F5FF",
+                  bg: "#00F5FF15",
+                  border: "#00F5FF30",
+                  desc: "10 лет в игровой индустрии. Бывший продюсер Nival.",
+                },
+                {
+                  name: "Мария Соколова",
+                  role: "Директор по развитию",
+                  emoji: "🚀",
+                  color: "#BF00FF",
+                  bg: "#BF00FF15",
+                  border: "#BF00FF30",
+                  desc: "Запустила 40+ успешных краудфандинг-кампаний.",
+                },
+                {
+                  name: "Дмитрий Ким",
+                  role: "Технический директор",
+                  emoji: "⚡",
+                  color: "#FF006E",
+                  bg: "#FF006E15",
+                  border: "#FF006E30",
+                  desc: "Архитектор платформы. Ранее — Mail.ru Games.",
+                },
+              ].map((person, i) => (
+                <div
+                  key={person.name}
+                  className="card-game rounded-2xl p-6 text-center animate-on-scroll"
+                  style={{ transitionDelay: `${i * 0.12}s` }}
+                >
+                  <div
+                    className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-4"
+                    style={{ background: person.bg, border: `1px solid ${person.border}`, boxShadow: `0 0 20px ${person.bg}` }}
+                  >
+                    {person.emoji}
+                  </div>
+                  <p className="font-russo text-white text-lg mb-1">{person.name}</p>
+                  <p className="text-xs font-russo uppercase tracking-widest mb-3" style={{ color: person.color }}>
+                    {person.role}
+                  </p>
+                  <p className="text-sm text-muted-foreground font-rubik leading-relaxed">{person.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
